@@ -261,15 +261,15 @@ local Entities = {
 			workspace.Ambience_Seek.TimePosition = 0
 			workspace["Ambience_Seek"]:Play()
  
-			local seekMoving = game:GetObjects("rbxassetid://114450117906534")[1]
+			local firgur = game:GetObjects("rbxassetid://82021422263312")[1]
  
-			seekMoving.Figure.Anchored = true
-			seekMoving.Parent = workspace
+			firgur.Figure.Anchored = true
+			firgur.Parent = workspace
  
 			local val = Instance.new("CFrameValue")
  
 			val.Changed:Connect(function()
-				seekMoving.SeekRig:PivotTo(val.Value)
+				firgur.SeekRig:PivotTo(val.Value)
 			end)
  
 			local early, latest = SpawnerLibrary.Calculate()
@@ -277,21 +277,21 @@ local Entities = {
 			val.Value = early.Nodes["1"].CFrame + Vector3.new(0,5,0)
  
 			local anim = Instance.new("Animation")
-			anim.AnimationId = "rbxassetid://9896641335"
+			anim.AnimationId = "rbxassetid://12699383722"
  
-			seekMoving.SeekRig.AnimationController:LoadAnimation(anim):Play()
+			firgur.SeekRig.AnimationController:LoadAnimation(anim):Play()
  
 			local orig = game.Players.LocalPlayer.Character.Humanoid.WalkSpeed
 			game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 0
  
 			require(game:GetService("Players").LocalPlayer.PlayerGui.MainUI.Initiator["Main_Game"].RemoteListener.Cutscenes.SeekIntro)(u2)
-			seekMoving.Figure.Footsteps:Play()
-			seekMoving.Figure.FootstepsFar:Play()
+			firgur.Figure.Footsteps:Play()
+			firgur.Figure.FootstepsFar:Play()
  
 			local anim = Instance.new("Animation")
 			anim.AnimationId = "rbxassetid://7758895278"
  
-			seekMoving.SeekRig.AnimationController:LoadAnimation(anim):Play()
+			firgur.SeekRig.AnimationController:LoadAnimation(anim):Play()
  
 			local chase = true
  
