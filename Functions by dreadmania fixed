@@ -261,15 +261,15 @@ local Entities = {
 			workspace.Ambience_Seek.TimePosition = 0
 			workspace["Ambience_Seek"]:Play()
  
-			local firgur = game:GetObjects("rbxassetid://114450117906534")[1]
+			local seekMoving = game:GetObjects("rbxassetid://114450117906534")[1]
  
-			firgur.Figure.Anchored = true
-			firgur.Parent = workspace
+			seekMoving.Figure.Anchored = true
+			seekMoving.Parent = workspace
  
 			local val = Instance.new("CFrameValue")
  
 			val.Changed:Connect(function()
-				firgur.SeekRig:PivotTo(val.Value)
+				seekMoving.SeekRig:PivotTo(val.Value)
 			end)
  
 			local early, latest = SpawnerLibrary.Calculate()
@@ -279,19 +279,19 @@ local Entities = {
 			local anim = Instance.new("Animation")
 			anim.AnimationId = "rbxassetid://9896641335"
  
-			firgur.SeekRig.AnimationController:LoadAnimation(anim):Play()
+			seekMoving.SeekRig.AnimationController:LoadAnimation(anim):Play()
  
 			local orig = game.Players.LocalPlayer.Character.Humanoid.WalkSpeed
 			game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 0
  
 			require(game:GetService("Players").LocalPlayer.PlayerGui.MainUI.Initiator["Main_Game"].RemoteListener.Cutscenes.SeekIntro)(u2)
-			firgur.Figure.Footsteps:Play()
-			firgur.Figure.FootstepsFar:Play()
+			seekMoving.Figure.Footsteps:Play()
+			seekMoving.Figure.FootstepsFar:Play()
  
 			local anim = Instance.new("Animation")
 			anim.AnimationId = "rbxassetid://7758895278"
  
-			firgur.SeekRig.AnimationController:LoadAnimation(anim):Play()
+			seekMoving.SeekRig.AnimationController:LoadAnimation(anim):Play()
  
 			local chase = true
  
@@ -300,7 +300,7 @@ local Entities = {
 					if chase then
 						game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 23
 						if math.random(1,100) == 95 then
-							firgur.Figure.Scream:Play()
+							seekMoving.Figure.Scream:Play()
 						end
 					end
 				end
@@ -327,7 +327,7 @@ local Entities = {
 			chase = false
 			task.wait()
  
-			firgur:Destroy()
+			seekMoving:Destroy()
  
 			game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = orig
 			workspace.Ambience_Seek.TimePosition = 92.5
