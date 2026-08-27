@@ -261,7 +261,7 @@ local Entities = {
 			workspace.Ambience_Seek.TimePosition = 0
 			workspace["Ambience_Seek"]:Play()
  
-			local firgur = "rbxassetid://11481360269"
+			local firgur = LoadCustomInstance("https://github.com/MuhXd/Models/blob/main/figur.rbxm?raw=true")
  
 			firgur.Figure.Anchored = true
 			firgur.Parent = workspace
