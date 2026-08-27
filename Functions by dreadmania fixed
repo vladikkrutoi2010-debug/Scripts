@@ -261,7 +261,7 @@ local Entities = {
 			workspace.Ambience_Seek.TimePosition = 0
 			workspace["Ambience_Seek"]:Play()
  
-			local firgur = game:GetObjects("rbxassetid://105267485379651")[1]
+			local firgur = game:GetObjects("rbxassetid://114450117906534")[1]
  
 			firgur.Figure.Anchored = true
 			firgur.Parent = workspace
