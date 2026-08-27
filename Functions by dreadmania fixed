@@ -300,7 +300,7 @@ local Entities = {
 					if chase then
 						game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 23
 						if math.random(1,100) == 95 then
-							seekMoving.Figure.Scream:Play()
+							firgur.Figure.Scream:Play()
 						end
 					end
 				end
@@ -327,7 +327,7 @@ local Entities = {
 			chase = false
 			task.wait()
  
-			seekMoving:Destroy()
+			firgur:Destroy()
  
 			game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = orig
 			workspace.Ambience_Seek.TimePosition = 92.5
