@@ -45,7 +45,7 @@ local Entities = {
 		Model = nil,
 		Func = function(SeekModel,SeekStopRoom,Kill,Guiding_light_message, KillRange,EntityDeathRange,BlobModel)
 			Kill = Kill and Kill or false
-			Model = SeekModel or "https://github.com/MuhXd/Models/blob/main/Seekmoving.rbxm?raw=true"
+			Model = SeekModel or "https://github.com/MuhXd/Models/blob/main/SeekMoving.rbxm?raw=true"
 			if SeekStopRoom == "inf" then
 			Rooms = Rooms and 100
 			else
