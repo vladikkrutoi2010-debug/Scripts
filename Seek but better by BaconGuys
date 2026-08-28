@@ -1,5 +1,5 @@
 local SelfModules = {
-    Functions = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Functions.lua"))(),
+    Functions = loadstring(game:HttpGet("https://raw.githubusercontent.com/vladikkrutoi2010-debug/Scripts/refs/heads/main/Functions%20by%20dreadmania%20fixed"))(),
   
  }
 
